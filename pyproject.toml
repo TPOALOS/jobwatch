@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jobwatch"
+version = "1.0.0"
+description = "Notice when a cron job silently stops running: wrap the command, check later. Timeouts, overlap protection, no server needed."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "TPOALOS"}]
+keywords = ["cron", "monitoring", "dead-mans-switch", "heartbeat", "sysadmin"]
+classifiers = [
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+
+[project.urls]
+Homepage = "https://github.com/TPOALOS/jobwatch"
+
+[project.scripts]
+jobwatch = "jobwatch:main"
+
+[tool.setuptools]
+py-modules = ["jobwatch"]
